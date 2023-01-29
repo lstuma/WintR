@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/post.css">
+{% endblock %}
+{% block js %}
+    <script src="/static/js/post.js" defer></script>
+{% endblock %}
+{% block title %} Make a post! {% endblock %}
+{% block content %}
+    <div class="card-small">
+        <form action="/post/" method="POST" id="input-form">
+            {% csrf_token %}
+            <input type="text" class="montserrat bold input-smooth" name="title" id="input-title" required maxlength="47" placeholder="Event name">
+            <hr/>
+            <textarea class="montserrat bold textarea-smooth" name="body" id="textarea-body" required maxlength="2000" spellcheck="false" placeholder="Describe your request further.."></textarea>
+            <hr/>
+            <div id="input-group-1">
+                <input type="text" name="tag" id="input-tag" required maxlength="50" placeholder="Add a tag">
+                <div id="input-group-2">
+                    <div id="input-group-3">
+                        <img id="img-location" src="/static/img/internet-access-icon.svg">
+                        <input type="text" name="location" id="input-location" required maxlength="100" readonly  value="Online">
+                    </div>
+                   <button type="submit" id="input-submit">Post</button>
+               </div>
+            </div>
+        </form>
+    </div>
+{% endblock %}

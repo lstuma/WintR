@@ -1,0 +1,29 @@
+{% for submission, attending in submissions %}
+    <div class="card">
+        <div class="post-head">
+            <div class="submission-title-group">
+                <h2 class="submission-title">{{submission.title}}</h2>
+                <a class="submission-username" href="/user?u={{submission.author.username}}" class="navbar-item montserrat bold">{{submission.author.username}}</a>
+            </div>
+            <div class="submission-location-group">
+                {% if submission.location == "Online" %}
+                    <span class="submission-date">{{submission.date}}</span>
+                    <img src="/static/img/internet-access-icon.svg" class="submission-img-location">
+                {% else %}
+                    <span class="submission-location">{{submission.location}}</span>
+                    <img src="/static/img/maps-pin-black-icon.svg" class="submission-img-location">
+                    <p class="submission-date">{{submission.date}}</p>
+                {% endif %}
+            </div>
+        </div>
+        <hr/>
+        <p class="submission-body">{{submission.body}}</p>
+        <div class="submission-footer">
+            <div class="submission-controls">
+                <button class="{% if attending %}submission-button-attend{% else %}submission-button-not-attend{% endif %}" id="submission-attend-button-{{submission.submission_id}}" submission="{{submission.submission_id}}" onclick="attend(event)"><img src="/static/img/community-icon.svg" class="submission-button-attend-img"> Attend</button>
+                <span class="submission-attendee-count" id="submission-attendee-count-{{submission.submission_id}}"> {{submission.impressions}} attending</span>
+            </div>
+            <a class="submission-tag" href="/tag/?t={{submission.tag}}"> #{{submission.tag}} </a>
+        </div>
+    </div>
+{% endfor %}
