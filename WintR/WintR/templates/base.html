@@ -11,7 +11,7 @@
         {% block js %} <!-- blank --> {% endblock %}
 
         <!-- Title -->
-        <title>{% block title %} WintR {% endblock %}</title>
+        <title>{% block title %} ComeTogether {% endblock %}</title>
 
         <!-- FavIcon -->
         <link rel="icon" type="image/svg+xml" href="/static/img/diversity-icon.svg">
@@ -28,8 +28,8 @@
         <nav class="navbar-head">
             <div class="navbar-cotainer" id="navbar-container-left">
                 <a href="/"><img src="/static/img/diversity-icon.svg" id="navbar-icon">
-                <h2 class="navbar-item" id="navbar-brand">WintR Hackathon</h2></a>
-                <a href="#"><h3 class="navbar-item">About</h3></a>
+                <h2 class="navbar-item" id="navbar-brand">ComeTogether</h2></a>
+                <a href="/about/"><h3 class="navbar-item">About</h3></a>
             </div>
             <form action="/tag/" method="GET" id="navbar-search-form"><img src="/static/img/search-icon.svg" id="navbar-search-icon"><input id="navbar-search-bar" type="text" name="t" maxlength="50" required value="{% block searchbar-value %}{% endblock %}" placeholder="Enter a tag to search for.."></form>
             <div class="navbar-cotainer" id="navbar-container-right">

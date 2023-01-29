@@ -38,7 +38,7 @@ body {
 
 input:-webkit-autofill, input:-webkit-autofill:active, input { -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; font-size: 1.3em; color: #1a1c1c; background-color: #ffffff; border-radius: 100em; border: 0; padding: 0.5em 1em; margin: 0.75em 0; transition: 0.2s; height: 1.2em; }
 input:hover{ -webkit-box-shadow: 0 0 0 30px #F8F8F8 inset !important; background-color: #F8F8F8; }
-input:focus{ -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; background-color: #FFFFFF; }
+input:focus{ -webkit-box-shadow: 0 0 0 30px #ffffff inset; background-color: #FFFFFF; }
 button { font-size: 1.3em; font-weight: bold; background-color: #0099FF; color: #FFFFFF; border-radius: 100em; border: 0; padding: 0.5em 1em; margin: 0.3em; transition: 0.2s; }
 button:hover { background-color: #007BFF; }
 .btn-icon, .btn-icon:hover { cursor: pointer; background-color: #00000000; color: #00000000; padding-right: 0; }
