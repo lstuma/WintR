@@ -25,7 +25,7 @@ The implementation of this project is very simple:
 ##### Sign Up page
 ![Sign Up page img](https://imgur.com/cd8JAXv.png)
 ##### Search bar demo
-![Search bar demo img](https://imgur.com/7IGkpyy.png)
+![Search bar demo img](https://imgur.com/HS1O0ib.png)
 ##### User profile demo
 ![User profile demo img](https://imgur.com/4bEXZi4.png)
 ##### Submit post demo
