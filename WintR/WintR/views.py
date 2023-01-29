@@ -19,7 +19,6 @@ def login_(request):
         if user:
             # Set session cookie and redirect to homepage
             login(request, user)
-            print("login successfull!")
             return redirect('/')
         else:
             # Wrong login credentials
