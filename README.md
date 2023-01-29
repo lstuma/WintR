@@ -30,3 +30,5 @@ The implementation of this project is very simple:
 ![User profile demo img](https://imgur.com/4bEXZi4.png)
 ##### Submit post demo
 ![Submit post demo img](https://imgur.com/5MTbKiI.png)
+##### About page
+![About page img](https://imgur.com/tbIClqI.png)
