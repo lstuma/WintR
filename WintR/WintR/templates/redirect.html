@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/login.css">
+{% endblock %}
+{% block title %} Login {% endblock %}
+{% block content %}
+    <script>
+        // Redirect
+        window.location.replace("{{ link }}");
+    </script>
+    <div class="card">
+        <h1 class="montserrat bold"> Oh! </h1>
+        <p> Not redirected? Klick <a href="{{ link }}">this link</a>!</p>
+    </div>
+{% endblock %}

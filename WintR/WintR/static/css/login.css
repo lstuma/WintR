@@ -1,0 +1,10 @@
+#input-username, #input-password {
+    display: block;
+}
+
+#input-heading { justify-content: center; display: flex; }
+#input-form{
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+}

@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/login.css">
+{% endblock %}
+{% block title %} Log In {% endblock %}
+{% block content %}
+    <div class="card-small">
+        <h1 class="montserrat bold" id="input-heading"> Log In </h1>
+        <hr/>
+        <form action="/login/" method="POST" id="input-form">
+            {% csrf_token %}
+            <div>
+                <input id="input-username" placeholder="Username" type=text name="name" maxlength="30" class="shadow">
+                {% if error %}<p class="bold error"> {{error_message}} </p>{% endif %}
+            </div>
+            <input id="input-password" placeholder="Password" type=password name="password" class="shadow">
+            <button id="input-submit" type="submit" class="shadow">Log In</button>
+        </form>
+    </div>
+{% endblock %}

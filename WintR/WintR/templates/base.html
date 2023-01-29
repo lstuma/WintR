@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Default CSS -->
+        <link rel="stylesheet" href="/static/css/global.css">
+
+        <!-- CSS -->
+        {% block css %} <!-- blank --> {% endblock %}
+
+        <!-- JS -->
+        {% block js %} <!-- blank --> {% endblock %}
+
+        <!-- Title -->
+        <title>{% block title %} WintR {% endblock %}</title>
+
+        <!-- FavIcon -->
+        <link rel="icon" type="image/svg+xml" href="/static/img/diversity-icon.svg">
+
+        <!-- Metadata -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+
+        <!-- Add dummy script to solve: page loading before stylesheets bug causing sudden flash after stylesheets have been loaded -->
+        <script> 0 </script>
+
+    </head>
+    <body>
+        <nav class="navbar-head">
+            <div class="navbar-cotainer" id="navbar-container-left">
+                <a href="/"><img src="/static/img/diversity-icon.svg" id="navbar-icon">
+                <h2 class="navbar-item" id="navbar-brand">WintR Hackathon</h2></a>
+                <a href="#"><h3 class="navbar-item">About</h3></a>
+            </div>
+            <form action="/tag/" method="GET" id="navbar-search-form"><img src="/static/img/search-icon.svg" id="navbar-search-icon"><input id="navbar-search-bar" type="text" name="t" maxlength="50" required value="{% block searchbar-value %}{% endblock %}" placeholder="Enter a tag to search for.."></form>
+            <div class="navbar-cotainer" id="navbar-container-right">
+                {% if request.user.is_authenticated %}<form action="/post/" method="get"><button class="btn-icon"><img src="/static/img/edit-round-icon.svg" width="50"></button></form><a id="username" href="/user?u={{user.username}}" class="navbar-item montserrat bold">{{user.username}}</a>{% else %}<form action="/login/" method="get"><button type="submit" class="navbar-item" id="login-button">Login</button></form>{% endif %}
+                {% if request.user.is_authenticated %}<form action="/logout/" method="get"><button type="submit" class="navbar-item" id="signup-button">Logout</button></form>{% else %}<form action="/signup/" method="get"><button type="submit" class="navbar-item" id="signup-button">Signup</button></form>{% endif %}
+            </div>
+        </nav>
+        {% block precontent %} {% endblock %}
+        <div id="content">
+            {% block content %} <!-- Content here --> {% endblock %}
+        </div>
+    </body>
+</html>

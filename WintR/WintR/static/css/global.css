@@ -1,0 +1,102 @@
+@font-face {
+    font-family: 'Digitalt';
+    src: url("/static/fonts/Digitalt.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'FjallaOne';
+    src: url("/static/fonts/FjallaOne-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family: 'Monsterrat';
+    src: url("/static/fonts/Montserrat-VariableFont_wght.ttf") format("truetype");
+}
+
+body {
+    background-color: #D9D9D9;
+}
+
+.navbar-head {
+    color: #1a1c1c;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    position: sticky; top: 0; left: 0;
+    transform: translate(-1em, -0.5em);
+    z-index: 10;
+    background-color: #F0F0F0;
+    width: 100%;
+    padding: 0.2em 1em;
+    border-bottom: 1px solid #D9D9D9;
+}
+.navbar-cotainer {
+    align-items: center;
+}
+.navbar-item {
+    color: #1a1c1c;
+    display: inline-flex;
+    padding: 0 1em;
+}
+
+input:-webkit-autofill, input:-webkit-autofill:active, input { -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; font-size: 1.3em; color: #1a1c1c; background-color: #ffffff; border-radius: 100em; border: 0; padding: 0.5em 1em; margin: 0.75em 0; transition: 0.2s; height: 1.2em; }
+input:hover{ -webkit-box-shadow: 0 0 0 30px #F8F8F8 inset !important; background-color: #F8F8F8; }
+input:focus{ -webkit-box-shadow: 0 0 0 30px #ffffff inset !important; background-color: #FFFFFF; }
+button { font-size: 1.3em; font-weight: bold; background-color: #0099FF; color: #FFFFFF; border-radius: 100em; border: 0; padding: 0.5em 1em; margin: 0.3em; transition: 0.2s; }
+button:hover { background-color: #007BFF; }
+.btn-icon, .btn-icon:hover { cursor: pointer; background-color: #00000000; color: #00000000; padding-right: 0; }
+.bold { font-weight: bold; }
+h1, h2, h3, h4, h5, h6 { font-family:Monsterrat; font-weight: bold; }
+h1 { font-size: 3em; } h2 { font-size: 2em; } h3 { font-size: 1.7em; } h4 { font-size: 1.5em; } h5 { font-size: 1.3em; } h6 { font-size: 1em; }
+a { text-decoration: none; }
+hr { border: 0.1em solid; border-radius: 100em;  border-color: #00000010; }
+
+.digitalt { font-family: Digitalt; }
+.fjallaone { font-family: FjallaOne; }
+.montserrat { font-family: Monsterrat; }
+
+#navbar-icon { max-height: 2em; width: auto; padding-left: 1.3em; }
+#navbar-container-right{ display: flex; justify-content: right; padding-right: 2em; }
+#navbar-brand { padding-left: 0.15em; }
+#login-button { color: #FFFFFF; padding: 0.4em 1em;}
+#signup-button { background-color: #FFFFFF00; color: #0088DD;  padding: 0.4em 1em; border: #0099FF 0.1em solid; transition: 0.3s; }
+#signup-button:hover { background-color: #E0E0E0FF; }
+#username { font-size: 1.5em; }
+#navbar-search-icon { max-height: 1.7em; width: auto; display: inline-flex;  transform: translate(2.5em, 0.3em); z-index:1; }
+#navbar-search-bar { padding-left: 2.8em; width: 34em; transform: translate(0, -1.05em); }
+#navbar-search-form { display: inline-flex; transform: translate(0, 2em)}
+
+#content{
+    margin-bottom: 10em;
+
+}
+
+.shadow
+{
+    box-shadow: 0 0 1em 0 rgb(0 0 0 / 0.4);
+}
+
+
+.card
+{
+    padding: 0.5em 2em 2em;
+    margin: 1em auto;
+    width: 60em;
+    background-color: #F0F0F0;
+    color: #1a1c1c;
+    border-radius: 1em;
+}
+
+.card-small
+{
+    padding: 0.5em 2em 2em;
+    margin: 1em auto;
+    width: 40em;
+    background-color: #F0F0F0;
+    color: #1a1c1c;
+    border-radius: 1em;
+}
+
+.error
+{
+    font-family: Monsterrat;
+    margin: 0;
+    color: #E60E39;
+}
