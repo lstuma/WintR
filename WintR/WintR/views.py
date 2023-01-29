@@ -7,8 +7,10 @@ from django.contrib.auth import authenticate, login, logout
 import _WintR.submissions as submissions
 
 def index(request):
-    print(submissions.request_all())
     return HttpResponse(render(request, 'index.html'))
+
+def about(request):
+    return HttpResponse(render(request, 'about.html'))
 
 def login_(request):
     # If method is post user is trying to log in

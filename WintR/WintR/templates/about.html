@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+{% endblock %}
+{% block js %}
+{% endblock %}
+{% block title %} WintR {% endblock %}
+{% block content %}
+<div class="card">
+        <div class="post-head">
+            <div class="submission-title-group">
+                <h2 class="submission-title">WintR Hackathon</h2>
+                <a class="submission-username" href="/user?u=lstuma" class="navbar-item montserrat bold">lstuma</a>
+            </div>
+            <div class="submission-location-group">
+                <span class="submission-location">665 W Olive Ave, Sunnyvale, CA 94086, USA</span>
+                <img src="/static/img/maps-pin-black-icon.svg" class="submission-img-location">
+            </div>
+        </div>
+        <hr/>
+        <p class="submission-body">
+            <p>The WintR Hackathon challenged contestants to develop a piece of technology incorporating the phrase: "Technology is best when it brings people together"</p>
+
+            <h3>What is ComeTogether?</h3>
+            <p>ComeTogether is supposed to be an answer to this prompt and is the result of up to 28 hours of coding. The project is a python-django web app allowing users to publish posts, in which they can animate other's to join them at an event, advertise an event (for example a hackathon) or simply search for fellow mates to complete projects (like for example a hackathon) with together.</p>
+
+            <h3>Technological details</h3>
+            <p>The implementation of this project is very simple:</p>
+            <ul style="font-family: Monsterrat; font-weight: bold;">
+                <li> The backend utilizes the python-django framework to handle databases, user authentication, http request-response handling, ... (pretty much everything)</li>
+                <li> The database used is a SQLite db; however, it might as well just be a SQL db or any other database.</li>
+                <li> In the frontend the implementation occurs through the use of css, javascript and html. No libraries for these are used.</li>
+            </ul>
+        <div class="submission-footer">
+            <div class="submission-controls">
+                <button class="submission-button-attend" style="cursor: pointer;"><img src="/static/img/community-icon.svg" class="submission-button-attend-img"> Attend</button>
+                <span class="submission-attendee-count"> ∞ attending</span>
+            </div>
+            <a class="submission-tag" href="/tag/?t=WintRHackathon"> #WintRHackathon </a>
+        </div>
+    </div>
+{% endblock %}

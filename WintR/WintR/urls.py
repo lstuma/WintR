@@ -20,6 +20,7 @@ import WintR.views as views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.index),
+    path('about/', views.about),
     path('login/', views.login_),
     path('logout/', views.logout_),
     path('signup/', views.signup),
