@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/user.css">
+{% endblock %}
+{% block js %}
+    <!-- Enables requesting and displaying further data after loading the page aka infinite scrolling -->
+    <script src="/static/js/user.js" defer></script>
+    <!-- Attend button -->
+    <script src="/static/js/attend.js" defer></script>
+{% endblock %}
+{% block title %} WintR {% endblock %}
+{% block precontent %}
+    <form action="/" method="GET">
+        <button id="back-button" type="submit">
+            <img src="/static/img/backspace-erase-icon.svg" id="img-backslash">
+            <span class="back-button-txt">
+                You are browsing
+                <span id="user-username">{{quser.username}}</span>'s
+                profile. <br/>Get back to homepage?
+            </span>
+        </button>
+    </form>
+{% endblock %}
+{% block content %}
+{% endblock %}

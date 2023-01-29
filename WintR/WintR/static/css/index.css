@@ -1,0 +1,14 @@
+p, span, a { font-family: Monsterrat !important; font-weight: bold;}
+.post-head { display:grid; grid-template-columns: 1fr 1fr; }
+.submission-img-location { height: 2em; width: auto; position: relative; transform: translate(0.6em, 0.6em);}
+.submission-location-group { justify-self: end; transform: translate(-1em, 1em);}
+.submission-username { color: #0099FF; position: absolute; transform:translate(0.15em, -1.5em); }
+.submission-date { font-size: 0.8em; justify-self: end; }
+.submission-title-subgroup { display: grid; grid-template-columns: 1fr 1fr;}
+.submission-body { max-width: 100%; word-break: break-all; }
+.submission-button-not-attend { background-color: #FFFFFF00; color: #0088DD; outline: #0099FF 0.1em solid; transition: 0.3s; transform: translate(-0.5em, 0); }
+.submission-button-not-attend:hover { background-color: #E0E0E0FF; }
+.submission-button-attend, .submission-button-not-attend { padding: 0.4em 1em; transform: translate(-0.5em, 0); }
+.submission-button-attend-img { height: 1em; width: auto; transform: translate(0, 0.1em); margin-right: 0.2em; }
+.submission-tag { justify-self: end; transform: translate(-0.5em, 1.5em); color: #0099FF; }
+.submission-footer { display: grid; grid-template-columns: 1fr 1fr; }

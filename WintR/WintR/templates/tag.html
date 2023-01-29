@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block css %}
+    <link rel="stylesheet" href="/static/css/index.css">
+    <link rel="stylesheet" href="/static/css/user.css">
+{% endblock %}
+{% block js %}
+    <!-- Enables requesting and displaying further data after loading the page aka infinite scrolling -->
+    <script src="/static/js/tag.js" defer></script>
+    <!-- Attend button -->
+    <script src="/static/js/attend.js" defer></script>
+{% endblock %}
+{% block title %} WintR {% endblock %}
+{% block searchbar-value %}{{tag}}{% endblock %}
+{% block precontent %}
+    <form action="/" method="GET">
+        <button id="back-button" type="submit">
+            <img src="/static/img/backspace-erase-icon.svg" id="img-backslash">
+            <span class="back-button-txt" style="margin-left: 4em;">
+                You are browsing tag
+                #<span id="tag">{{tag}}</span>
+                <br/>Get back to homepage?
+            </span>
+        </button>
+    </form>
+{% endblock %}
+{% block content %}
+{% endblock %}
